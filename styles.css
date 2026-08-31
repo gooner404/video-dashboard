@@ -18,15 +18,15 @@ html, body {
   color: var(--text);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body { padding: 24px; }
+body { padding: 16px; }
 .app { max-width: 1200px; margin: 0 auto; }
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 h1 { margin: 0; font-size: clamp(1.8rem, 2.5vw, 2.6rem); }
 .stats { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -51,7 +51,7 @@ h1 { margin: 0; font-size: clamp(1.8rem, 2.5vw, 2.6rem); }
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   padding: 12px 14px;
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--border);
@@ -122,7 +122,7 @@ input, select {
 #category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 .category-card {
   background: rgba(255,255,255,0.03);
@@ -131,13 +131,13 @@ input, select {
   overflow: hidden;
 }
 .category-header {
-  padding: 14px 16px;
+  padding: 10px 12px;
   background: linear-gradient(135deg, rgba(124,156,255,0.18), rgba(88,215,179,0.12));
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .category-name { font-size: 1.08rem; font-weight: 700; }
 .category-count {
@@ -148,7 +148,7 @@ input, select {
   font-size: 0.8rem;
 }
 .items { list-style: none; padding: 0; margin: 0; }
-.item { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.item { padding: 10px 12px; border-bottom: 1px solid var(--border); }
 .item:last-child { border-bottom: none; }
 .item-row { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
 .item-info {
@@ -217,7 +217,7 @@ input, select {
   text-decoration: none;
   word-break: break-word;
 }
-.meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; align-items: center; }
 .pill {
   display: inline-flex;
   align-items: center;
@@ -235,11 +235,12 @@ input, select {
 .empty { color: var(--muted); padding: 14px 16px; }
 
 @media (max-width: 768px) {
-  body { padding: 16px; }
+  body { padding: 12px; }
 
   .topbar {
     align-items: flex-start;
     flex-direction: column;
+    margin-bottom: 10px;
   }
 
   h1 {
@@ -261,7 +262,9 @@ input, select {
   .controls {
     flex-direction: column;
     align-items: stretch;
-    padding: 12px;
+    padding: 10px;
+    gap: 8px;
+    margin-bottom: 10px;
   }
 
   .search-wrap {
@@ -272,6 +275,7 @@ input, select {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
   }
 
   .filter-btn {
@@ -294,7 +298,7 @@ input, select {
 }
 
 @media (max-width: 620px) {
-  body { padding: 12px; }
+  body { padding: 10px; }
 
   .controls,
   .add-form,
@@ -305,7 +309,8 @@ input, select {
   .category-header {
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
+    padding: 8px 10px;
   }
 
   .category-name {
@@ -313,7 +318,7 @@ input, select {
   }
 
   .item {
-    padding: 10px 12px;
+    padding: 8px 10px;
   }
 
   .item-row {
@@ -322,7 +327,7 @@ input, select {
 
   .item-info {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
 
   .thumb {
