@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliothèque vidéo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="topbar">
+        <h1>Bibliothèque vidéo</h1>
+        <div class="stats">
+          <div class="stat"><span class="stat-label">Total</span><span id="total-count" class="stat-value">0</span></div>
+          <div class="stat"><span class="stat-label">Vu</span><span id="watched-count" class="stat-value">0</span></div>
+          <div class="stat"><span class="stat-label">Pas vu</span><span id="unwatched-count" class="stat-value">0</span></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="search-wrap"><input id="search" type="text" placeholder="Rechercher un titre ou une catégorie..." /></div>
+        <select id="category-select"><option value="all">Toutes catégories</option></select>
+        <div class="filters" aria-label="Filtres de statut">
+          <button class="filter-btn active" data-filter="all" type="button">Tous</button>
+          <button class="filter-btn" data-filter="watched" type="button">Vu</button>
+          <button class="filter-btn" data-filter="unwatched" type="button">Pas vu</button>
+        </div>
+      </div>
+
+      <form id="add-item-form" class="add-form">
+        <div class="form-row">
+          <div>
+            <label for="new-category-name">Nouvelle catégorie</label>
+            <input id="new-category-name" type="text" placeholder="Ex. Documentaires" />
+          </div>
+          <div>
+            <label for="category-picker">Ou choisir une catégorie existante</label>
+            <select id="category-picker"><option value="">Choisir une catégorie</option></select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div><label for="new-item-title">Titre</label><input id="new-item-title" type="text" placeholder="Titre de la vidéo" required /></div>
+          <div><label for="new-item-url">URL</label><input id="new-item-url" type="url" placeholder="https://..." required /></div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="new-item-status">Statut</label>
+            <select id="new-item-status">
+              <option value="false">Pas vu</option>
+              <option value="true">Vu</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="action-btn" type="submit">Ajouter la vidéo</button>
+        </div>
+      </form>
+
+      <div id="category-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
